@@ -1,5 +1,10 @@
-my_dict = {"key1": 100, "key2": 200, "key3": 300}
+my_list1 = [1, 2, 3, 4, 5]
+my_list2 = []
 
-my_dict["key4"] = 400
+for value in my_list1:
+    result = value + 42
+    my_list2.append(result)
+    print(result)
 
-print(my_dict)
+
+
