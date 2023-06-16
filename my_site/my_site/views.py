@@ -3,7 +3,7 @@ from django.http.response import HttpResponse
 
 
 articles = {
-    "home": "Juan Pablo GT ",
+    "home": "I'm Juan Pablo GT ",
     "contact": "Contact Page",
     "about": "About Page",
     "social": "Social Page",
