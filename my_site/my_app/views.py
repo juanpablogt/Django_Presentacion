@@ -10,40 +10,26 @@ articles = {
     "about": "About Page",
     "social": "Social Page",
     "projects": "Projects Page",
+    "error": "Page not found",
 
 }
-def home_view(request,topic):
 
-    try:
-        result = articles[topic]
-        return HttpResponse(result)
-    except:
-        raise Http404("404 GENERIC ERROR PAGE")
-    
-def contact_view(request,topic):
-    try:
-        result = articles[topic]
-        return HttpResponse(result)
-    except:
-        raise Http404("404 GENERIC ERROR PAGE")
-    
-def about_view(request,topic):
-    try:
-        result = articles[topic]
-        return HttpResponse(result)
-    except:
-        raise Http404("404 GENERIC ERROR PAGE")
-    
-def social_view(request,topic):
-    try:
-        result = articles[topic]
-        return HttpResponse(result)
-    except:
-        raise Http404("404 GENERIC ERROR PAGE")
-    
-def projects_view(request,topic):
-    try:
-        result = articles[topic]
-        return HttpResponse(result)
-    except:
-        raise Http404("404 GENERIC ERROR PAGE")
+
+def home_view(request):
+    return HttpResponse(articles["home"])
+
+def contact_view(request):
+    return HttpResponse(articles["contact"])
+
+def about_view(request):
+    return HttpResponse(articles["about"])
+
+def social_view(request):
+    return HttpResponse(articles["social"])
+
+def projects_view(request):
+    return HttpResponse(articles["projects"])
+
+def error_view(request):
+    return HttpResponseServerError("Error 500")
+
