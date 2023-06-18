@@ -1,5 +1,9 @@
 from django.shortcuts import render
 from django.http.response import HttpResponse
+from django.http.response import HttpResponseNotFound
+from django.http.response import HttpResponseServerError
+from django.http.response import Http404
+
 
 
 articles = {
@@ -11,6 +15,7 @@ articles = {
 
 }
 def home_view(request):
+
     return HttpResponse(articles["home"])
 
 def contact_view(request):
