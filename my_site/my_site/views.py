@@ -11,17 +11,28 @@ articles = {
 
 }
 def home_view(request):
-    return HttpResponse(articles["home"])
+    try:
+        return HttpResponse(articles["home"])
+    except KeyError:
+        return HttpResponse("Key not found")
 
 def contact_view(request):
-    return HttpResponse(articles["contact"])
-
+    try:
+        return HttpResponse(articles["contact"])
+    except KeyError:
+        return HttpResponse("Key not found")
 def about_view(request):
-    return HttpResponse(articles["about"])
-
+    try:
+        return HttpResponse(articles["about"])
+    except KeyError:
+        return HttpResponse("Key not found")
 def social_view(request):
-    return HttpResponse(articles["social"])
-
+    try:
+        return HttpResponse(articles["social"])
+    except KeyError:
+        return HttpResponse("Key not found")
 def projects_view(request):
-    return HttpResponse(articles["projects"])
-
+    try:
+        return HttpResponse(articles["projects"])
+    except KeyError:
+        return HttpResponse("Key not found")
