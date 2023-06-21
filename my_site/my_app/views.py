@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from django.http.response import HttpResponse
+from django.http.response import HttpResponse, Http404, HttpResponseNotFound
+
 
 
 articles = {
@@ -13,21 +14,39 @@ articles = {
 
 # Create your views here.
 def home_view(request,topics):
-    return HttpResponse(articles[topics])
+    try:
+        result = articles[topics]
+        return HttpResponse(articles[topics])
+    except:
+       raise Http404("no existe la pagina")
 
 def contact_view(request,topics):
-
-    return HttpResponse(articles[topics])
-
+    try:
+        result = articles[topics]
+        return HttpResponse(articles[topics])
+    except:
+       raise Http404("no existe la pagina")
+    
 def about_view(request,topics):
-
-    return HttpResponse(articles[topics])
+    try:
+        result = articles[topics]
+        return HttpResponse(articles[topics])
+    except:
+       raise Http404("no existe la pagina")
 
 def social_view(request,topics):
 
-    return HttpResponse(articles[topics])
-
+    try:
+        result = articles[topics]
+        return HttpResponse(articles[topics])
+    except:
+       raise Http404("no existe la pagina")
+    
 def projects_view(request,topics):
 
-    return HttpResponse(articles[topics])
+    try:
+        result = articles[topics]
+        return HttpResponse(articles[topics])
+    except:
+       raise Http404("no existe la pagina")
 
