@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http.response import HttpResponse
+from django.http import HttpResponse
 
 def home_view(request):
     return render(request, 'my_app/maqueta1.html ')
@@ -15,4 +15,3 @@ def projects_view(request):
 
 def social_view(request):
     return render(request, 'my_app/maqueta1.html ')
-
