@@ -2,4 +2,4 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def simple_view(request):
-    return render(request, 'first_app/maqueta1.html')
+    return render(request, 'first_app/maqueta.html')
