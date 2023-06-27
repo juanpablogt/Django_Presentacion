@@ -6,6 +6,6 @@ def simple_view(request):
 
 def contact_view(request):
     
-    my_var = {'first_name':'Pablo','last_name':'Gonzalez', 'age':'32'}
+    my_var = {'first_name':'pablo','last_name':'gonzalez', 'age':'32'}
     return render(request,'first_app/contact.html',context= my_var)
 
