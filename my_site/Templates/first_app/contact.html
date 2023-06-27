@@ -14,6 +14,12 @@
             <h2>mi apellido es: {{last_name | capfirst}}</h2>
             <h2>mi edad es: {{age}}</h2>
 
+            <h2>{% for item in list %}
+                <ul>
+                    <li>{{item}}</li>
+                </ul>
+                {% endfor %}</h2>
+
         </div>
 
     </body>
