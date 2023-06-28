@@ -1,9 +1,9 @@
 <html>
 
-<head>
-    <title>J.Pablo Gonzalez</title>
-    <link rel="stylesheet" type="text/css" href="first_app/styles.css">
-</head>
+    <head>
+        <title>J.Pablo Gonzalez</title>
+        <link rel="stylesheet" type="text/css" href="first_app/styles.css">
+    </head>
 
     <body>
         
@@ -20,6 +20,18 @@
                     <h3>Por favor inicia sesion</h3>
                 {% endif %}
             </h2>
+
+            <ul>
+            {% for num in list %}
+            {% if num == 1 %}
+                <li>El numero es: {{num}}</li>
+            {% else %}
+                <li>{{num}}</li>
+
+            {% endif %}
+            {% endfor %}
+
+            </ul>
 
         </div>
 
