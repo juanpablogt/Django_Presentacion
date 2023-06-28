@@ -14,15 +14,11 @@
             <h2>mi apellido es: {{last_name | capfirst}}</h2>
             <h2>mi edad es: {{age}}</h2>
 
-            <h2>{% for item in list %}
-                <ul>
-                    <li>{{item}}</li>
-                </ul>
-                {% endfor %}</h2>
-
-            <h2>{% for item in list %}
-                <li>{{item}}</li>
-                {% endfor %}
+            <h2>{% if user_logged_in %} 
+                    <h3>Bienvenido {{first_name | capfirst}}</h3> 
+                    {% else %} 
+                    <h3>Por favor inicia sesion</h3>
+                {% endif %}
             </h2>
 
         </div>
