@@ -10,3 +10,6 @@ def contact_view(request):
               'user_logged_in':True}
     return render(request,'first_app/contact.html',context= my_var)
 
+def ensayo_view(request):
+    return render(request,'first_app/ensayo.html')
+
