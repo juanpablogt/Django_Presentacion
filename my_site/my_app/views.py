@@ -12,4 +12,3 @@ def contact_view(request):
 
 def ensayo_view(request):
     return render(request,'first_app/ensayo.html')
-
