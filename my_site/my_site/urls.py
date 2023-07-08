@@ -28,4 +28,4 @@ urlpatterns = [
     
 ]
 
-
+handler404 = views.my_custom_page_error_view
