@@ -1,4 +1,14 @@
 {% extends "base.html"%}
 {% block content %}
-<h1>Delete</h1>
+<div class="container">
+    <h1>Enter the primary key of the row you want to delete</h1>
+    <form action=" " method='POST'>
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="pk">Primary Key: </label>
+            <input class="form-control" type="text" name="pk" id="pk">
+            <input class="form-control" type="submit">
+        </div>
+    </form>
+</div>
 {% endblock %}
