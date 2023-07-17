@@ -1,4 +1,12 @@
-{% extends "base.html"%}
+{% extends "base.html" %}
 {% block content %}
-<h1>list</h1>
+<div class="container">
+    <h1>Lista de Tarjetas</h1>
+    <ul>
+    {% for card in all_cards %}
+        <li>{{ card.name }}, {{ card.email }}, {{ card.phone }}, {{ card.address }}</li>
+    {% endfor %}
+
+    </ul>
+</div>
 {% endblock %}
