@@ -1,0 +1,108 @@
+body {
+    background-color: #d37a7a; /* Cambia el valor a tu color deseado */
+  }
+  
+.descripcion {
+    text-align: center;
+    margin-top: 30px;
+}
+  
+/* Estilo para el contenido principal */
+.descripcion p {
+    font-size: 18px;
+    margin: 20px;
+}
+  
+/* Estilo para la lista de habilidades y profesionales */
+.listas {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+    max-width: 600px;
+}
+  
+/* Estilo para cada lista */
+.listas ul {
+    width: 45%;
+}
+  
+/* Estilo para los encabezados de las listas */
+h3 {
+    margin-bottom: 10px;
+}
+  
+/* Estilo para los elementos de las listas */
+.listas li,
+#sk li,
+#int li {
+    margin-bottom: 5px;
+}
+  
+/* Estilo para la sección de contacto */
+.contact {
+    width: 300px;
+    margin: 30px auto;
+    padding: 20px;
+}
+  
+/* Estilo para la tabla de contacto */
+.contact table {
+    width: 100%;
+    border-collapse: collapse;
+}
+  
+/* Estilo para los encabezados de la tabla de contacto */
+.contact th {
+    padding: 10px;
+    background-color: #f2f2f2;
+    text-align: center;
+    font-weight: bold;
+}
+  
+/* Estilo para las celdas de la tabla de contacto */
+.contact td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+  
+/* Estilo para los enlaces de contacto */
+.contact a {
+    text-decoration: none;
+    color: #333;
+}
+  
+.contact a:hover {
+    text-decoration: underline;
+}
+  
+@media (max-width: 600px) {
+    /* Estilo para la tabla de contacto en dispositivos móviles */
+    .contact table {
+        font-size: 14px;
+    }
+  
+    /* Estilo para las celdas de la tabla de contacto en dispositivos móviles */
+    .contact th,
+    .contact td {
+        padding: 6px;
+    }
+  
+    /* Estilo para el encabezado de la tabla de contacto en dispositivos móviles */
+    .contact h3 {
+        font-size: 18px;
+    }
+}
+/* Estilo para la barra de navegación */
+/* Estilo para la barra de navegación */
+.navbar {
+    background-color: #0f0f0f;
+    color: #ffffff; /* Cambia #FF0000 por el color de texto deseado */
+    padding: 10px 0;
+}
+
+
+  
+  
+
+

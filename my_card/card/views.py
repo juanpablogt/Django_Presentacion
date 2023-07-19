@@ -11,10 +11,9 @@ def add(request):
     if request.method == 'POST':
         name = request.POST['name']
         email = request.POST['email']
-        phone = request.POST['phone']
-        address = request.POST['address']
+        mensaje = request.POST['mensaje']
         
-        new_card = Card(name=name, email=email, phone=phone, address=address)
+        new_card = Card(name=name, email=email, mensaje=mensaje)
         new_card.save()
         
         return redirect('card:list')
@@ -33,4 +32,7 @@ def delete(request):
             return redirect('card:list')
     else:
         return render(request, 'card/delete.html')
+    
+def acerca(request):
+    return render(request, 'card/acerca.html')
     
