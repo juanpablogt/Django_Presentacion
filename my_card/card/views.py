@@ -4,8 +4,14 @@ from .models import Card
 
 def list(request):
     all_cards = models.Card.objects.all()
+
+    # Anonimizar los correos electrónicos
+    for card in all_cards:
+        card.email = card.email[:3] + '...' + card.email.split('@')[-1]
+
     context = {'all_cards': all_cards}
     return render(request, 'card/list.html', context=context)
+
 
 def add(request):
     if request.method == 'POST':
