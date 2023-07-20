@@ -1,5 +1,5 @@
 body.my-custom-body {
-    background-color: #587017;
+    background-color: #10490e;
     color: #fff;
 }
 
@@ -74,5 +74,30 @@ input.btn.btn-primary:hover {
     background-color: rgb(212, 3, 3) !important;
 }
 
-    
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #000000;
+  }
   
+  /* Estilos para las celdas de encabezado (th) */
+  th {
+    background-color: #000000;
+    padding: 8px;
+    font-weight: bold;
+    text-align: left;
+    border: 1px solid #000000;
+  }
+  
+  /* Estilos para las celdas de datos (td) */
+  td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #000000;
+  }
+  
+  /* Estilos para filas alternas (para mejorar la legibilidad) */
+  tr:nth-child(even) {
+    background-color: #000000;
+  }
