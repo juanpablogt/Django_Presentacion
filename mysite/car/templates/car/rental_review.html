@@ -6,10 +6,16 @@
 
     <body>
         <h1>Thank you for your order!</h1>
-        <form method="POST">
-            {% csrf_token %}
-            {{form}}
-            <input type="submit">
+        <div class="container">
+            <form method="POST">
+                {% csrf_token %}
+                {% for field in form %}
+                <div class= form 'mb-3'>
+                    {{field.label_tag}}
+                </div>
+                    {{field}}
+                {% endfor %}
+                <input type="submit">
         </form>
     </body>
 </html>
