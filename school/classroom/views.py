@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView, FormView, CreateView, ListView, DetailView
+from django.views.generic import TemplateView, FormView, CreateView, ListView, DetailView,UpdateView, DeleteView
 from classroom.models import teacher
 from classroom.forms import ContactForm
 from django.urls import reverse_lazy
@@ -22,7 +22,7 @@ class ThanksPage(TemplateView):
 class TeacherCreateView(CreateView):
     model = teacher
     fields = "__all__"
-    success_url = reverse_lazy('classroom:thanks')
+    success_url = reverse_lazy('classroom:home')
 
     def form_valid(self, form):
         print(form.cleaned_data["first_name"])
@@ -38,3 +38,12 @@ class TeacherDetailView(DetailView):
     model = teacher
     
  
+class TeacherUpdateView(UpdateView):
+    model = teacher
+    fields = "__all__"
+    success_url = reverse_lazy('classroom:home')
+
+
+class TeacherDeleteView(DeleteView):
+    model = teacher
+    success_url = reverse_lazy('classroom:teacher_list')
