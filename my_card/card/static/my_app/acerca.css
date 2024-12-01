@@ -1,121 +1,128 @@
-/* Estilos para la sección de descripción */
-
+/* Estilos generales */
 .descripcion {
-    padding: 20px;
-    text-align: center;
-    font-family:cursive;
-  }
-  
-  .descripcion p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-  }
-  
-  /* Estilos para las listas de habilidades e intereses */
+  padding: 20px;
+  text-align: center;
+  font-family: cursive;
+}
+
+.descripcion p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Estilos para las listas de habilidades e intereses */
+.listas {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+  flex-wrap: wrap; /* Permite que las listas se ajusten mejor cuando hay poco espacio */
+}
+
+.lis1, .lis2 {
+  width: 45%; /* Cambié el tamaño al 45% para que ocupen menos espacio */
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.lis1 {
+  margin-right: 10px;
+}
+
+.lis1 h3, .lis2 h3 {
+  margin-bottom: 15px;
+}
+
+.lis1 ul, .lis2 ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.lis1 li, .lis2 li {
+  margin-bottom: 8px;
+}
+
+/* Estilos para la tabla de contactos */
+.contact {
+  margin-top: 30px;
+}
+
+.contact table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.contact th, .contact td {
+  padding: 10px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.contact th {
+  background-color: #e05454;
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+  background-color: #333;
+  color: white;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.navbar a:hover {
+  background-color: #555;
+}
+
+/* Estilos para la imagen redondeada */
+.rounded-image {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 150px; /* Ajusta el tamaño de la imagen según sea necesario */
+  height: 150px; /* Ajusta el tamaño de la imagen según sea necesario */
+  object-fit: cover; /* Asegura que la imagen se recorte correctamente para que sea un círculo */
+}
+
+/* Estilos para dispositivos móviles (Responsive) */
+@media (max-width: 768px) {
   .listas {
-    display: flex;
-    justify-content: space-around;
-    margin: 30px 0;
-    font-family: cursive;
-  }
-  
-  .lis1, .lis2 {
-    width: 45%;
-  }
-  
-  .lis1 h3, .lis2 h3 {
-    margin-bottom: 15px;
-  }
-  
-  .lis1 ul, .lis2 ul {
-    list-style: none;
-    padding-left: 0;
-  }
-  
-  .lis1 li, .lis2 li {
-    margin-bottom: 8px;
-  }
-  
-  /* Estilos para la tabla de contactos */
-  .contact {
-    margin-top: 30px;
-  }
-  
-  .contact table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  .contact th, .contact td {
-    padding: 10px;
-    text-align: center;
-    color: #ffffff;
-  }
-  
-  .contact th {
-    background-color: #e05454;
-  }
-  
-  /* Estilos para la navegación */
-  .navbar {
-    background-color: #333;
-    color: white;
-  }
-  
-  .navbar a {
-    color: white;
-    text-decoration: none;
-    padding: 10px;
-  }
-  
-  .navbar a:hover {
-    background-color: #555;
-  }
-  
-  /* Estilos para dispositivos móviles (Responsive) */
-  @media (max-width: 768px) {
-    .listas {
       flex-direction: column;
       align-items: center;
-    }
-  
-    .lis1, .lis2 {
-      width: 100%;
-    }
-  }
-  /* Estilos para las listas de habilidades e intereses */
-.listas {
-    display: flex;
-    justify-content: center;
-    margin: 30px 0;
-  }
-  
-  .lis1, .lis2 {
-    width: 20%;
-    text-align: left;
-  }
-  
-  .lis1 {
-    margin-right: 10px; /* Agregar un margen para separar las listas */
-  }
-  
-  .lis1 h3, .lis2 h3 {
-    margin-bottom: 15px;
-  }
-  
-  .lis1 ul, .lis2 ul {
-    list-style: none;
-    padding-left: 0;
-    margin: 0; /* Eliminar el margen predeterminado de las listas */
-  }
-  
-  .lis1 li, .lis2 li {
-    margin-bottom: 8px;
   }
 
-  .rounded-image {
-    border-radius: 50%;
-    overflow: hidden; 
+  .lis1, .lis2 {
+      width: 100%; /* En pantallas pequeñas, las listas ocupan el 100% */
+      text-align: center;
   }
- 
+
+  /* Estilos para la barra de navegación */
+  .navbar {
+      text-align: center; /* Centra el contenido en dispositivos pequeños */
+  }
+
+  /* Estilos para la tabla de contactos */
+  .contact table {
+      width: 100%;
+      font-size: 14px; /* Reduce el tamaño de la fuente para dispositivos pequeños */
+  }
+
+  .contact th, .contact td {
+      padding: 8px; /* Reduce el padding para que quepa mejor en pantallas pequeñas */
+  }
+}
+.nav .nav-link {
+  color: white; /* Asegura que el texto sea blanco */
+  padding: 10px 15px; /* Añade padding a los enlaces */
+  display: block; /* Asegura que los enlaces ocupen toda el área del item de la lista */
+  text-align: center; /* Centra el texto */
+}
+
+.nav-link:hover {
+  background-color: #555; /* Agrega un fondo al pasar el ratón */
+  color: #fff; /* Asegura que el texto siga siendo blanco al pasar el ratón */
+}

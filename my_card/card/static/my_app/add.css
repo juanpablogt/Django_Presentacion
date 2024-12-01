@@ -1,3 +1,4 @@
+/* Estilos generales */
 body.my-custom-body {
     background-color: #10490e;
     color: #fff;
@@ -5,7 +6,8 @@ body.my-custom-body {
 
 .container {
     margin: 20px auto;
-    width: 500px;
+    width: 100%; /* Ajustado al 100% para que ocupe todo el espacio disponible en pantallas más pequeñas */
+    max-width: 500px; /* Limita el ancho máximo a 500px en pantallas grandes */
 }
 
 .img-circle {
@@ -18,7 +20,6 @@ body.my-custom-body {
     text-align: center;
 }
 
-
 .form-title {
     margin-top: 30px;
     text-align: center;
@@ -30,17 +31,9 @@ body.my-custom-body {
 }
 
 .form-input input[type="text"],
-.form-input input[type="email"] {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
+.form-input input[type="email"],
 .form-input textarea {
-    width: 100%;
-    height: 100px;
+    width: 100%; /* Asegura que los inputs y textarea ocupen el 100% del ancho disponible */
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -62,10 +55,15 @@ body.my-custom-body {
 .space-bottom {
     margin-bottom: 10px;
 }
+
 .rounded-image {
     border-radius: 50%;
-    overflow: hidden; 
-  }
+    overflow: hidden;
+    width: 150px; /* Ajusta el tamaño de la imagen */
+    height: 150px;
+    object-fit: cover; /* Asegura que la imagen se recorte para formar un círculo */
+}
+
 input.btn.btn-primary {
     background-color: rgb(161, 49, 49) !important;
 }
@@ -79,25 +77,66 @@ table {
     width: 100%;
     border-collapse: collapse;
     border: 1px solid #000000;
-  }
-  
-  /* Estilos para las celdas de encabezado (th) */
-  th {
+}
+
+th {
     background-color: #000000;
     padding: 8px;
     font-weight: bold;
     text-align: left;
     border: 1px solid #000000;
-  }
-  
-  /* Estilos para las celdas de datos (td) */
-  td {
+}
+
+td {
     padding: 8px;
     text-align: left;
     border: 1px solid #000000;
-  }
-  
-  /* Estilos para filas alternas (para mejorar la legibilidad) */
-  tr:nth-child(even) {
+}
+
+tr:nth-child(even) {
     background-color: #000000;
-  }
+}
+
+/* Estilos responsivos para dispositivos móviles */
+@media (max-width: 768px) {
+    /* Para la tabla: */
+    table {
+        font-size: 14px; /* Reduce el tamaño de la fuente para mejor legibilidad en pantallas pequeñas */
+    }
+
+    th, td {
+        padding: 6px; /* Reduce el padding de las celdas */
+    }
+
+    /* Ajustes para el contenedor */
+    .container {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    /* Ajustes para los inputs y botones */
+    .form-input input[type="text"],
+    .form-input input[type="email"],
+    .form-input textarea,
+    .form-input input[type="submit"] {
+        padding: 12px; /* Aumenta el padding para mejorar la usabilidad en pantallas táctiles */
+        font-size: 16px; /* Aumenta el tamaño de la fuente para que sea más fácil de leer */
+    }
+
+    /* Reducción de la imagen redondeada */
+    .rounded-image {
+        width: 120px; /* Ajusta el tamaño de la imagen en pantallas pequeñas */
+        height: 120px;
+    }
+    
+    /* Estilo para el título de formulario */
+    .form-title {
+        font-size: 20px; /* Ajusta el tamaño del título */
+    }
+}
+
+li nav-item {
+    margin-right: 10px;
+}
+
+  
